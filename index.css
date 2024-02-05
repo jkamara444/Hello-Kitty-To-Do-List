@@ -13,49 +13,60 @@
 body {
     background-image: url(https://wallpapercave.com/wp/wp11995517.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fedef0;
 }
 
-/* .box {
-    width: 600px;
-    height: 300px;
-    background-color: rgba(250, 203, 234, 0.8);
-    border: 5px dotted white;
-    display: flex;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    padding: 10px;
-    border-radius: 10%;
-    transform: translate(0, 0);
-}*/
 
 .box h2 {
     width: 100%;
     font-family: hkfont, sans-serif;
-    font-size: 32px;
+    font-size: 44px;
     padding-left: 20px;
     padding-bottom: 20px;
     color: rgb(233, 85, 154);
 }
 
+.box img {
+    max-height: 160px;
+    width: auto;
+    max-width: 160px;
+    position: absolute;
+    right: -10%;
+    top: -30%;
+    z-index: 99;
+}
+
 .form {
     width: 100%;
     max-width: 600px;
+    overflow: visible;
+    border: 4px dotted white;
     background-color: rgba(250, 203, 234, 1);
-    /*rgba(246, 168, 220, 0.4);*/
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
+    position: relative;
     border-radius: 5%;
-
-
 }
 
 input {
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Mukta', serif;
+    padding: 10px;
     width: 100%;
     height: 30px;
+    color: rgb(117, 117, 117);
     border: 0.3px solid rgb(241, 152, 194);
-    border-radius: 5%;
+    font-weight: 300;
+}
+
+.inp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(246, 168, 220, 0.4);
+    padding: 6px 6px;
+    border-radius: 3px;
 }
 
 button {
@@ -63,10 +74,146 @@ button {
     border: none;
     outline: none;
     font-size: 18px;
+    margin-left: 10px;
     background-color: rgba(246, 168, 220, 1);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    height: 30px;
     border-radius: 10%;
 }
 
-.row {}
+ul {
+    padding-top: 10px;
+}
+
+ul li {
+    font-size: 17px;
+    font-family: 'Mukta', serif;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 6px;
+    list-style: none;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li::before {
+    background-image: url(./imgs/uncheckedd.PNG);
+    background-size: cover;
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+.checked {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-image: url(./imgs/checked.PNG);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    font-size: 26px;
+    color: #e3448b;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background-color: rgba(255, 163, 227, 0.574);
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    background-color: rgba(238, 181, 221, 0.4);
+}
+
+@media screen and (max-width: 730px) {
+    .box h2 {
+        font-size: 30px;
+    }
+
+    .box img {
+        max-height: 120px;
+        max-width: 120px;
+        right: -5%;
+        top: -20%;
+    }
+
+    .form {
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding-left: 30px;
+    }
+
+    ul li span {
+        font-size: 14px;
+        width: 30px;
+        line-height: 30px;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box img {
+        max-height: 80px;
+        max-width: 80px;
+        right: -2%;
+        top: -10%;
+    }
+
+    .form {
+        max-width: 300px;
+        padding: 10px;
+        margin-top: 200px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    ul li {
+        font-size: 12px;
+        padding-left: 20px;
+    }
+
+    ul li span {
+        font-size: 12px;
+        width: 20px;
+        line-height: 20px;
+    }
+}
