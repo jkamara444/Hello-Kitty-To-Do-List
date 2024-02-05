@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: hkfont;
+    src: url(./imgs/Boldins.ttf);
+}
+
+body {
+    background-image: url(https://wallpapercave.com/wp/wp11995517.jpg);
+    background-size: cover;
+}
+
+/* .box {
+    width: 600px;
+    height: 300px;
+    background-color: rgba(250, 203, 234, 0.8);
+    border: 5px dotted white;
+    display: flex;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    padding: 10px;
+    border-radius: 10%;
+    transform: translate(0, 0);
+}*/
+
+.box h2 {
+    width: 100%;
+    font-family: hkfont, sans-serif;
+    font-size: 32px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: rgb(233, 85, 154);
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(250, 203, 234, 1);
+    /*rgba(246, 168, 220, 0.4);*/
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 5%;
+
+
+}
+
+input {
+    font-size: 18px;
+    width: 100%;
+    height: 30px;
+    border: 0.3px solid rgb(241, 152, 194);
+    border-radius: 5%;
+}
+
+button {
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: rgba(246, 168, 220, 1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 30px;
+    border-radius: 10%;
+}
+
+.row {}
